@@ -1,11 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 const Hero = () => {
-  const [email, setEmail] = useState('');
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
@@ -26,14 +24,6 @@ const Hero = () => {
       }
     };
   }, []);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log('Submitted email:', email);
-    // Add actual form handling logic here
-    setEmail('');
-  };
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
@@ -75,22 +65,26 @@ const Hero = () => {
             with real-time analysis and personalized feedback.
           </p>
           
-          <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-4 max-w-md mx-auto animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              className="flex-grow px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 focus:outline-none focus:ring-2 focus:ring-primary"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-            <button type="submit" className="btn btn-primary">
-              Free Trial
-            </button>
-          </form>
+          <div className="flex justify-center animate-fadeIn" style={{ animationDelay: '0.4s' }}>
+            <a 
+              href="/downloads/active-vision.apk"
+              className="btn btn-primary inline-flex items-center justify-center px-6 py-3 text-lg"
+              download
+            >
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-6 w-6 mr-2 inline-block" 
+                viewBox="0 0 24 24" 
+                fill="currentColor"
+              >
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4483-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4483.9993.9993 0 .5511-.4483.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5676.416.416 0 00-.5676.1521l-2.0223 3.503C15.5902 8.2439 13.8533 7.8508 12 7.8508s-3.5902.3931-5.1367 1.0989L4.841 5.4467a.4161.4161 0 00-.5677-.1521.4157.4157 0 00-.1521.5676l1.9973 3.4592C2.6889 11.1867.3432 14.6589 0 18.761h24c-.3435-4.1021-2.6892-7.5743-6.0775-9.4396"/>
+              </svg>
+              <span>Download for Android</span>
+            </a>
+          </div>
           
           <p className="text-sm text-gray-300 mt-4 animate-fadeIn" style={{ animationDelay: '0.6s' }}>
-            14-day free trial, no credit card required
+            Available for Android devices running version 8.0 and above
           </p>
         </div>
       </div>
