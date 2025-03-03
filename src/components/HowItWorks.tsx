@@ -54,12 +54,12 @@ const HowItWorks = () => {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900">
+    <section id="how-it-works" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold mb-6 text-gray-900 dark:text-white">How It Works</h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Active Vision's AI processes your video in real-time to bring you the pro experience
+            Active Vision&apos;s AI processes your video in real-time to bring you the pro experience
             <br />— no internet required.
           </p>
         </div>

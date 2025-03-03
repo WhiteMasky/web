@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 const Testimonials = () => {
   const testimonials = [
@@ -53,7 +52,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="py-20 bg-white dark:bg-black overflow-hidden">
+    <section id="testimonials" className="py-20 bg-white dark:bg-black overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -66,8 +65,8 @@ const Testimonials = () => {
         
         <div className="relative max-w-4xl mx-auto">
           {/* Decorative elements */}
-          <div className="absolute -top-10 -left-10 text-8xl text-gray-200 dark:text-gray-800 opacity-60 font-serif">"</div>
-          <div className="absolute -bottom-10 -right-10 text-8xl text-gray-200 dark:text-gray-800 opacity-60 font-serif">"</div>
+          <div className="absolute -top-10 -left-10 text-8xl text-gray-200 dark:text-gray-800 opacity-60 font-serif">&quot;</div>
+          <div className="absolute -bottom-10 -right-10 text-8xl text-gray-200 dark:text-gray-800 opacity-60 font-serif">&quot;</div>
           
           <div className="relative bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12 shadow-xl">
             <div className="mb-8">
